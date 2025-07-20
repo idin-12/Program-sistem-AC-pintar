@@ -1,36 +1,30 @@
+# ac_pintar.py
 # Program Sistem AC Pintar
-# Menyala hanya jika:
-# - Suhu panas
-# - Jendela tertutup
-# - Ada orang di rumah
+# AC menyala hanya jika:
+# - Suhu panas (is_hot = yes)
+# - Jendela tertutup (window_closed = yes)
+# - Ada orang di rumah (someone_home = yes)
 
 def input_to_bool(prompt):
     """
-    Fungsi untuk meminta input user yes/no dan mengembalikan boolean.
+    Mengubah input user 'yes' atau 'no' menjadi nilai boolean.
     """
     user_input = input(prompt + " (yes/no): ").strip().lower()
     return user_input == "yes"
 
-def check_ac(is_hot, window_closed, someone_home):
-    """
-    Mengecek kondisi AC berdasarkan syarat.
-    """
-    if is_hot and window_closed and someone_home:
-        return "AC MENYALA"
-    else:
-        return "AC MATI"
-
 def main():
-    print("=== Sistem AC Pintar ===")
+    print("=== SISTEM AC PINTAR ===")
 
-    # Input user untuk ketiga kondisi
+    # Input kondisi
     is_hot = input_to_bool("Apakah suhu panas?")
     window_closed = input_to_bool("Apakah jendela tertutup?")
     someone_home = input_to_bool("Apakah ada orang di rumah?")
 
-    # Cek logika AC
-    result = check_ac(is_hot, window_closed, someone_home)
-    print(result)
+    # Mengecek logika AC
+    if is_hot and window_closed and someone_home:
+        print("AC MENYALA")
+    else:
+        print("AC MATI")
 
 if __name__ == "__main__":
     main()
