@@ -40,7 +40,7 @@ def main():
             st.error("❌ **AC MATI**\nPastikan semua syarat terpenuhi.")
 
     st.markdown("---")
-    st.caption("Dibuat oleh [Nama Kamu] | Sistem AC Pintar Streamlit")
+    st.caption("Dibuat oleh [illal akhsanu] | Sistem AC Pintar Streamlit")
 
 if __name__ == "__main__":
     main()
